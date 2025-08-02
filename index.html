@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreazy Mentorship | Personalized Academic Guidance</title>
+    <meta name="description" content="1:1 mentorship with expert educators. Personalized learning plans, weekly progress tracking, and 24/7 doubt solving for academic success.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
+                </div>
+            </div>
+            
+            <div class="nav-center">
+                <div class="nav-menu" id="navMenu">
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#benefits" class="nav-link">Benefits</a>
+                    <a href="#team" class="nav-link">Our Team</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="darkmode-toggle" />
+                    <label for="darkmode-toggle" class="theme-toggle-label">
+                        <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
+                            <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001" height="16" />
+                            <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)" width="40.001" height="16" />
+                            <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001" height="16" />
+                            <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16" height="39.999" />
+                            <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001" height="16" />
+                            <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001" height="16" />
+                            <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001" height="16" />
+                            <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16" height="39.999" />
+                            <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+                            <rect x="240" width="16" height="72" />
+                            <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999" height="16" />
+                            <rect y="240" width="72" height="16" />
+                            <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16" height="71.999" />
+                            <rect x="240" y="424" width="16" height="72" />
+                            <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999" height="16" />
+                            <rect x="424" y="240" width="72" height="16" />
+                            <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16" height="71.999" />
+                        </svg>
+                        <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739" style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
+                            <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+                        </svg>
+                    </label>
+                </div>
+                <button class="btn btn-primary btn-small">Book Consultation</button>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>1:1 Mentorship for Academic Success</h1>
+                    <p class="hero-subtitle">Personalized Guidance from Top Educators</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-large">Book Free Consultation</button>
+                        <div class="trust-badge">
+                            <span class="trust-icon">✓</span>
+                            Trusted by 10,000+ students
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-illustration">
+                        <div class="illustration-card">
+                            <div class="card-header">📚 Mentorship</div>
+                            <div class="card-content">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="stats">
+                                    <span>📈 95% Success Rate</span>
+                                    <span>⭐ 4.9/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>The Student Struggle</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">📚</div>
+                    <h3>Lack of Personalized Guidance</h3>
+                    <p>Generic study plans don't address individual learning styles and academic challenges.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Overwhelming Syllabus Pressure</h3>
+                    <p>Students struggle to prioritize topics and manage time effectively across subjects.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🎯</div>
+                    <h3>Career Direction Confusion</h3>
+                    <p>Unclear about which academic path leads to desired career outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>Scoreazy's Approach</h2>
+                    <div class="solution-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <span>Tailored roadmap for every student</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🤖</span>
+                            <span>AI-matched expert mentors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-visual">
+                    <div class="mentor-illustration">
+                        <div class="mentor-card">
+                            <div class="mentor-avatar">👨‍🏫</div>
+                            <div class="mentor-info">
+                                <h4>AI-Matched Mentor</h4>
+                                <div class="mentor-skills">
+                                    <span class="skill-tag">Math</span>
+                                    <span class="skill-tag">Physics</span>
+                                    <span class="skill-tag">Chemistry</span>
+                                </div>
+                                <div class="match-score">98% Match</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>    <
+!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Why Choose Scoreazy Mentorship</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Personalized Learning Plans</h3>
+                    <p>Custom study schedules designed around your strengths, weaknesses, and goals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Weekly Progress Tracking</h3>
+                    <p>Regular assessments and feedback to keep you on track and motivated.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>24/7 Doubt Solving</h3>
+                    <p>Get instant answers to your questions anytime, anywhere from expert mentors.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>University Application Guidance</h3>
+                    <p>Complete support for college applications, essays, and interview preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Book Assessment</h3>
+                        <p>Complete a comprehensive evaluation of your academic needs and goals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Get Matched</h3>
+                        <p>Our AI algorithm pairs you with the perfect mentor based on your requirements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Start Sessions</h3>
+                        <p>Begin regular 1:1 sessions with your dedicated mentor at flexible timings.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Track Progress</h3>
+                        <p>Monitor your improvement with detailed analytics and milestone achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Student Success Stories</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"My mentor helped me improve my grades from C+ to A- in just 3 months. The personalized approach made all the difference!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👩‍💻</div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <span>Computer Science, MIT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The university application guidance was incredible. I got into my dream school with a full scholarship!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👨‍⚕️</div>
+                        <div class="author-info">
+                            <h4>Marcus Johnson</h4>
+                            <span>Pre-Med, Harvard</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"24/7 doubt solving saved my semester. Having instant access to expert help was a game-changer."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-photo">👩‍🔬</div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <span>Engineering, Stanford</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="team-container">
+            <h1 class="team-title">OUR TEAM</h1>
+            <div class="carousel-container">
+                <button class="nav-arrow left" aria-label="Previous team member">‹</button>
+                <div class="carousel-track">
+                    <div class="team-card" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Emily Kim">
+                    </div>
+                    <div class="team-card" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Michael Steward">
+                    </div>
+                    <div class="team-card" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Emma Rodriguez">
+                    </div>
+                    <div class="team-card" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Julia Gimmel">
+                    </div>
+                    <div class="team-card" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Lisa Anderson">
+                    </div>
+                    <div class="team-card" data-index="5">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="James Wilson">
+                    </div>
+                </div>
+                <button class="nav-arrow right" aria-label="Next team member">›</button>
+            </div>
+            <div class="member-info">
+                <h2 class="member-name">Emily Kim</h2>
+                <p class="member-role">Founder</p>
+            </div>
+            <div class="team-dots">
+                <div class="team-dot active" data-index="0"></div>
+                <div class="team-dot" data-index="1"></div>
+                <div class="team-dot" data-index="2"></div>
+                <div class="team-dot" data-index="3"></div>
+                <div class="team-dot" data-index="4"></div>
+                <div class="team-dot" data-index="5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Free Trial</h3>
+                        <div class="price">$0<span>/week</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 1 mentor session</li>
+                        <li>✓ Basic assessment</li>
+                        <li>✓ Study plan overview</li>
+                        <li>✗ Progress tracking</li>
+                        <li>✗ 24/7 support</li>
+                    </ul>
+                    <button class="btn btn-outline">Start Free Trial</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Standard</h3>
+                        <div class="price">$99<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 4 mentor sessions/month</li>
+                        <li>✓ Personalized study plan</li>
+                        <li>✓ Weekly progress reports</li>
+                        <li>✓ Doubt solving support</li>
+                        <li>✓ Resource library access</li>
+                    </ul>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="price">$199<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Unlimited mentor sessions</li>
+                        <li>✓ 24/7 priority support</li>
+                        <li>✓ University application help</li>
+                        <li>✓ Career guidance</li>
+                        <li>✓ Parent progress updates</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What qualifications do your mentors have?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our mentors are verified educators with advanced degrees from top universities. They undergo rigorous screening and have proven track records in academic mentoring.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How flexible are the session timings?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sessions can be scheduled according to your availability. We offer morning, afternoon, and evening slots across different time zones.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the typical program duration?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Program duration varies based on your goals. Most students see significant improvement within 3-6 months of consistent mentoring.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What technology do I need for sessions?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You only need a computer or tablet with internet connection. We use user-friendly video conferencing tools that work on any device.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment options are available?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, and offer monthly or annual payment plans. All transactions are secure and encrypted.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you guarantee results?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we cannot guarantee specific grades, 95% of our students report improved academic performance within the first semester of mentoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
+                    </div>
+                    <p>Empowering students through personalized mentorship and academic guidance.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#benefits">Benefits</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#help">Help Center</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Scoreazy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="container">
+            <span>Ready to transform your academic journey?</span>
+            <button class="btn btn-primary">Book Free Consultation</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
