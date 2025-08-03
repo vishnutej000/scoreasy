@@ -59,7 +59,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -223,7 +228,7 @@ p {
     background: var(--neutral-color);
     border-radius: 40px;
     box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.2),
-                inset 0px -2px 8px rgba(255, 255, 255, 0.4);
+        inset 0px -2px 8px rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: 0.3s;
     border: 1px solid var(--border-color);
@@ -266,25 +271,25 @@ p {
     visibility: hidden;
 }
 
-#darkmode-toggle:checked + .theme-toggle-label {
+#darkmode-toggle:checked+.theme-toggle-label {
     background: #242424;
     border-color: #444;
 }
 
-#darkmode-toggle:checked + .theme-toggle-label:after {
+#darkmode-toggle:checked+.theme-toggle-label:after {
     left: calc(100% - 36px);
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-#darkmode-toggle:checked + .theme-toggle-label svg.sun {
+#darkmode-toggle:checked+.theme-toggle-label svg.sun {
     fill: #7e7e7e;
 }
 
-#darkmode-toggle:checked + .theme-toggle-label svg.moon {
+#darkmode-toggle:checked+.theme-toggle-label svg.moon {
     fill: #fff;
 }
 
-#darkmode-toggle:active + .theme-toggle-label:after {
+#darkmode-toggle:active+.theme-toggle-label:after {
     width: 40px;
 }
 
@@ -415,8 +420,13 @@ p {
 }
 
 @keyframes progressFill {
-    from { width: 0%; }
-    to { width: 85%; }
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 85%;
+    }
 }
 
 .stats {
@@ -516,47 +526,272 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Solution Section */
-.solution {
+/* Roadmap Section */
+.roadmap {
     padding: var(--section-padding);
     background-color: var(--neutral-color);
+    position: relative;
+    overflow: hidden;
 }
 
-.solution-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.solution h2 {
-    text-align: left;
+.roadmap h2 {
     color: var(--primary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-.solution-features {
+.roadmap-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.125rem;
+    margin-bottom: 4rem;
+}
+
+.roadmap-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.roadmap-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.animated-path {
+    stroke-dasharray: 8, 4;
+    animation: pathAnimation 3s ease-in-out infinite;
+}
+
+@keyframes pathAnimation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dashoffset: 24;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.roadmap-checkpoints {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.checkpoint {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.feature-item {
+.checkpoint:hover {
+    transform: translateY(-5px);
+}
+
+.checkpoint[data-step="0"] {
+    top: 70%;
+    left: 5%;
+}
+
+.checkpoint[data-step="1"] {
+    top: 45%;
+    left: 20%;
+}
+
+.checkpoint[data-step="2"] {
+    top: 55%;
+    left: 40%;
+}
+
+.checkpoint[data-step="3"] {
+    top: 35%;
+    left: 60%;
+}
+
+.checkpoint[data-step="4"] {
+    top: 25%;
+    left: 75%;
+}
+
+.checkpoint[data-step="5"] {
+    top: 15%;
+    left: 90%;
+}
+
+.checkpoint-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--card-background);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-.feature-icon {
+    justify-content: center;
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
 }
 
-.solution-image {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
+.checkpoint:hover .checkpoint-icon {
+    background: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.checkpoint.start .checkpoint-icon,
+.checkpoint.destination .checkpoint-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    border-width: 4px;
+}
+
+.checkpoint-content {
+    text-align: center;
+    background: var(--card-background);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.checkpoint:hover .checkpoint-content {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.checkpoint-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: inherit;
+}
+
+.checkpoint-content p {
+    font-size: 0.875rem;
+    margin: 0;
+    color: inherit;
+    opacity: 0.8;
+}
+
+.checkpoint:hover .checkpoint-content p {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .roadmap-container {
+        height: 600px;
+    }
+
+    .roadmap-path {
+        display: none;
+    }
+
+    .checkpoint[data-step="0"] {
+        top: 5%;
+        left: 10%;
+    }
+
+    .checkpoint[data-step="1"] {
+        top: 18%;
+        left: 70%;
+    }
+
+    .checkpoint[data-step="2"] {
+        top: 31%;
+        left: 10%;
+    }
+
+    .checkpoint[data-step="3"] {
+        top: 44%;
+        left: 70%;
+    }
+
+    .checkpoint[data-step="4"] {
+        top: 57%;
+        left: 10%;
+    }
+
+    .checkpoint[data-step="5"] {
+        top: 70%;
+        left: 70%;
+    }
+
+    .checkpoint-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .checkpoint.start .checkpoint-icon,
+    .checkpoint.destination .checkpoint-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .checkpoint-content {
+        padding: 0.75rem 1rem;
+        min-width: 100px;
+    }
+
+    .checkpoint-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .checkpoint-content p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-container {
+        height: 500px;
+    }
+
+    .checkpoint-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .checkpoint.start .checkpoint-icon,
+    .checkpoint.destination .checkpoint-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .checkpoint-content {
+        padding: 0.5rem 0.75rem;
+        min-width: 80px;
+    }
+
+    .checkpoint-content h3 {
+        font-size: 0.8rem;
+    }
+
+    .checkpoint-content p {
+        font-size: 0.7rem;
+    }
 }
 
 /* Benefits Section */
@@ -1000,7 +1235,7 @@ p {
         border-right: 1px solid var(--border-color);
         gap: 1.5rem;
     }
-    
+
     .theme-toggle-container {
         margin: 1rem 0;
     }
@@ -1345,49 +1580,49 @@ p {
         font-size: 4.5rem;
         margin-bottom: 2rem;
     }
-    
+
     .carousel-container {
         height: 350px;
     }
-    
+
     .team-card {
         width: 200px;
         height: 280px;
     }
-    
+
     .team-card.left-2 {
         transform: translateX(-250px) scale(0.8) translateZ(-300px);
     }
-    
+
     .team-card.left-1 {
         transform: translateX(-120px) scale(0.9) translateZ(-100px);
     }
-    
+
     .team-card.right-1 {
         transform: translateX(120px) scale(0.9) translateZ(-100px);
     }
-    
+
     .team-card.right-2 {
         transform: translateX(250px) scale(0.8) translateZ(-300px);
     }
-    
+
     .member-name {
         font-size: 2rem;
     }
-    
+
     .member-role {
         font-size: 1.2rem;
     }
-    
+
     .member-name::before,
     .member-name::after {
         width: 50px;
     }
-    
+
     .member-name::before {
         left: -70px;
     }
-    
+
     .member-name::after {
         right: -70px;
     }
@@ -1397,49 +1632,49 @@ p {
     .team-title {
         font-size: 3rem;
     }
-    
+
     .carousel-container {
         height: 300px;
     }
-    
+
     .team-card {
         width: 160px;
         height: 220px;
     }
-    
+
     .team-card.left-2 {
         transform: translateX(-200px) scale(0.7) translateZ(-300px);
     }
-    
+
     .team-card.left-1 {
         transform: translateX(-100px) scale(0.85) translateZ(-100px);
     }
-    
+
     .team-card.right-1 {
         transform: translateX(100px) scale(0.85) translateZ(-100px);
     }
-    
+
     .team-card.right-2 {
         transform: translateX(200px) scale(0.7) translateZ(-300px);
     }
-    
+
     .member-name {
         font-size: 1.5rem;
     }
-    
+
     .member-role {
         font-size: 1rem;
     }
-    
+
     .member-name::before,
     .member-name::after {
         width: 30px;
     }
-    
+
     .member-name::before {
         left: -50px;
     }
-    
+
     .member-name::after {
         right: -50px;
     }
@@ -1459,16 +1694,17 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, var(--neutral-color) 0%, rgba(32, 178, 170, 0.1) 100%);
     min-height: 100vh;
     overflow: hidden;
     font-family: "Comfortaa", cursive;
-    padding-top: 90px; /* Add padding to account for fixed navbar */
+    padding-top: 90px;
+    /* Add padding to account for fixed navbar */
 }
 
 /* Dark theme compatibility for movie night */
 [data-theme="dark"] .movie-night {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
 }
 
 .movie-night .content {
@@ -1477,18 +1713,24 @@ p {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.28) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: var(--card-background);
     backdrop-filter: blur(30px);
     border-radius: 20px;
     width: min(900px, 100%);
-    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
-        0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
     z-index: 100;
     margin: 0 20px;
+}
+
+/* Dark theme content styling */
+[data-theme="dark"] .movie-night .content {
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.28) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+        0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    border: none;
 }
 
 .movie-night .info {
@@ -1502,11 +1744,16 @@ p {
 }
 
 .movie-night .info p {
-    color: #fff;
+    color: var(--text-dark);
     font-weight: 500;
     font-size: 1rem;
     margin-bottom: 20px;
     line-height: 1.5;
+}
+
+/* Dark theme text color */
+[data-theme="dark"] .movie-night .info p {
+    color: #fff;
 }
 
 .movie-night-text {
@@ -1526,12 +1773,30 @@ p {
     border-radius: 4px;
     outline: none;
     text-decoration: none;
-    color: #784ba0;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.btn-movie:hover {
+    background: #1A9B94;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Dark theme button styling */
+[data-theme="dark"] .btn-movie {
+    color: #784ba0;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .btn-movie:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
 }
 
 .btn-movie:hover {
@@ -1539,15 +1804,20 @@ p {
 }
 
 @keyframes gelatine {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1, 1);
     }
+
     25% {
         transform: scale(0.9, 1.1);
     }
+
     50% {
         transform: scale(1.1, 0.9);
     }
+
     75% {
         transform: scale(0.95, 1.05);
     }
@@ -1628,6 +1898,13 @@ p {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: none;
+    /* Hide by default in light mode */
+}
+
+/* Show animated circles only in dark mode */
+[data-theme="dark"] .movie-night .circles {
+    display: block;
 }
 
 .movie-night .circles li {
@@ -1637,12 +1914,10 @@ p {
     width: 20px;
     height: 20px;
     background-color: #ff3cac;
-    background-image: linear-gradient(
-        225deg,
-        #ff3cac 0%,
-        #784ba0 50%,
-        #2b86c5 100%
-    );
+    background-image: linear-gradient(225deg,
+            #ff3cac 0%,
+            #784ba0 50%,
+            #2b86c5 100%);
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -1728,6 +2003,7 @@ p {
         opacity: 1;
         border-radius: 0;
     }
+
     100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
@@ -1738,24 +2014,25 @@ p {
 /* Movie Night Responsive Design */
 @media (max-width: 768px) {
     .movie-night {
-        padding-top: 80px; /* Adjust for smaller navbar on mobile */
+        padding-top: 80px;
+        /* Adjust for smaller navbar on mobile */
     }
-    
+
     .movie-night .content {
         flex-direction: column-reverse;
         gap: 20px;
         padding: 20px;
     }
-    
+
     .movie-night .info {
         padding: 0 20px;
         max-width: 100%;
     }
-    
+
     .btn-movie {
         margin: 10px auto 40px;
     }
-    
+
     .movie-night .swiper {
         width: 200px;
         height: 350px;
@@ -1765,29 +2042,30 @@ p {
 
 @media (max-width: 480px) {
     .movie-night {
-        padding-top: 70px; /* Further adjust for very small screens */
+        padding-top: 70px;
+        /* Further adjust for very small screens */
     }
-    
+
     .movie-night .content {
         margin: 0 10px;
         padding: 15px;
     }
-    
+
     .movie-night .info {
         padding: 0 15px;
     }
-    
+
     .movie-night .info p {
         font-size: 0.9rem;
         text-align: center;
     }
-    
+
     .movie-night .swiper {
         width: 180px;
         height: 300px;
         padding: 20px 0;
     }
-    
+
     .btn-movie {
         padding: 8px 30px;
         font-size: 1rem;

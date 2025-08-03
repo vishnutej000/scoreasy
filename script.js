@@ -393,6 +393,66 @@ if (teamCards.length > 0) {
     updateTeamCarousel(0);
 }
 
+// Roadmap Interactive Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const checkpoints = document.querySelectorAll('.checkpoint');
+    
+    // Add click animation to checkpoints
+    checkpoints.forEach((checkpoint, index) => {
+        checkpoint.addEventListener('click', () => {
+            // Remove active class from all checkpoints
+            checkpoints.forEach(cp => cp.classList.remove('active'));
+            
+            // Add active class to clicked checkpoint and all previous ones
+            for (let i = 0; i <= index; i++) {
+                checkpoints[i].classList.add('active');
+            }
+            
+            // Add a pulse effect
+            checkpoint.style.animation = 'pulse 0.6s ease-in-out';
+            setTimeout(() => {
+                checkpoint.style.animation = '';
+            }, 600);
+        });
+        
+        // Add entrance animation with delay
+        setTimeout(() => {
+            checkpoint.style.opacity = '1';
+            checkpoint.style.transform = 'translateY(0)';
+        }, index * 200);
+    });
+    
+    // Initialize checkpoints with fade-in effect
+    checkpoints.forEach(checkpoint => {
+        checkpoint.style.opacity = '0';
+        checkpoint.style.transform = 'translateY(20px)';
+        checkpoint.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+});
+
+// Add pulse animation keyframes via JavaScript
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .checkpoint.active .checkpoint-icon {
+        background: var(--primary-color) !important;
+        color: var(--white);
+        border-color: var(--primary-color);
+    }
+    
+    .checkpoint.active .checkpoint-content {
+        background: var(--primary-color) !important;
+        color: var(--white);
+        border-color: var(--primary-color);
+    }
+`;
+document.head.appendChild(style);
+
 console.log('Scoreazy Mentorship Landing Page loaded successfully!');
 
 // Movie Night Swiper Initialization
