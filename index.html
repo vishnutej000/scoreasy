@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoreazy Mentorsh<!DOCTYPE html>
+    <title>Scoreazy Mentorsh
+        <!DOCTYPE html>
         <html lang="en">
-        
+
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,795 +24,833 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
             <link rel="stylesheet" href="styles.css">
         </head>
-        
-        <body>
-            <!-- Navigation -->
-            <nav class="navbar">
-                <div class="container">
-                    <div class="nav-brand">
-                        <div class="logo">
-                            <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
-                        </div>
-                    </div>
-        
-                    <div class="nav-center">
-                        <div class="nav-menu" id="navMenu">
-                            <a href="#benefits" class="nav-link">Benefits</a>
-                            <a href="#team" class="nav-link">Our Team</a>
-                            <a href="#pricing" class="nav-link">Pricing</a>
-                            <a href="#faq" class="nav-link">FAQ</a>
-                        </div>
-                    </div>
-        
-                    <div class="nav-right">
-                        <div class="theme-toggle-container">
-                            <input type="checkbox" id="darkmode-toggle" />
-                            <label for="darkmode-toggle" class="theme-toggle-label">
-                                <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496"
-                                    style="enable-background:new 0 0 496 496;" xml:space="preserve">
-                                    <rect x="152.994" y="58.921"
-                                        transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001"
-                                        height="16" />
-                                    <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
-                                        width="40.001" height="16" />
-                                    <rect x="46.947" y="315.048"
-                                        transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001"
-                                        height="16" />
-                                    <rect x="164.966" y="409.112"
-                                        transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16"
-                                        height="39.999" />
-                                    <rect x="303.031" y="421.036"
-                                        transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001"
-                                        height="16" />
-                                    <rect x="409.088" y="315.018"
-                                        transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001"
-                                        height="16" />
-                                    <rect x="409.054" y="165.011"
-                                        transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001"
-                                        height="16" />
-                                    <rect x="315.001" y="46.895"
-                                        transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16"
-                                        height="39.999" />
-                                    <path
-                                        d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
-                                    <rect x="240" width="16" height="72" />
-                                    <rect x="62.097" y="90.096"
-                                        transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999"
-                                        height="16" />
-                                    <rect y="240" width="72" height="16" />
-                                    <rect x="90.091" y="361.915"
-                                        transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16"
-                                        height="71.999" />
-                                    <rect x="240" y="424" width="16" height="72" />
-                                    <rect x="361.881" y="389.915"
-                                        transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999"
-                                        height="16" />
-                                    <rect x="424" y="240" width="72" height="16" />
-                                    <rect x="389.911" y="62.091"
-                                        transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16"
-                                        height="71.999" />
-                                </svg>
-                                <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739"
-                                    style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
-                                    <path
-                                        d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
-                                </svg>
-                            </label>
-                        </div>
-                        <button class="btn btn-primary btn-small">Book Consultation</button>
-                    </div>
-        
-                    <div class="nav-toggle" id="navToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
                 </div>
-            </nav>
-        
-            <!-- Movie Night Section -->
-            <section class="movie-night">
-                <div class="content">
-                    <div class="info">
-                        <p>
-                            Join us for a fantastic
-                            <span class="movie-night-text">movie night</span> filled with popcorn, laughter, and great company!
-                            Whether you're a fan of thrilling
-                            action, heartwarming dramas, or side-splitting comedies, we've got a
-                            film lineup to cater to all tastes. Save the date and bring your
-                            favorite snacks to make it a memorable evening.
-                        </p>
-                        <button class="btn-movie">Join</button>
-                    </div>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
-                                    alt="The Queen's Gambit" />
-                                <div class="overlay">
-                                    <span>8.5</span>
-                                    <h2>The Queen's Gambit</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-position"
-                                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e906353b-fde0-4518-9a03-16545c1161bd"
-                                    alt="Breaking Bad" />
-                                <div class="overlay">
-                                    <span>9.5</span>
-                                    <h2>Breaking Bad</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fc21e481-e28a-41a8-9db3-3b62c1ddc17e"
-                                    alt="Wednesday" />
-                                <div class="overlay">
-                                    <span>8.1</span>
-                                    <h2>Wednesday</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6b6ad966-79e1-4d3c-8f92-566d0fee8082"
-                                    alt="Stranger Things" />
-                                <div class="overlay">
-                                    <span>8.7</span>
-                                    <h2>Stranger Things</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2ad44f5d-2215-4416-9c9b-2bae3be51a67"
-                                    alt="Anne with an E" />
-                                <div class="overlay">
-                                    <span>8.6</span>
-                                    <h2>Anne with an E</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa8fe914-741f-4bf4-ad4a-24f19d1f4178"
-                                    alt="Friends" />
-                                <div class="overlay">
-                                    <span>8.9</span>
-                                    <h2>Friends</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-position"
-                                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d5f10b4f-7d34-45bd-bb5f-5f1530c2ac1c"
-                                    alt="The Crown" />
-                                <div class="overlay">
-                                    <span>8.6</span>
-                                    <h2>The Crown</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7cbac263-7c55-4428-908e-31018dc1bce3"
-                                    alt="House M.D." />
-                                <div class="overlay">
-                                    <span>8.7</span>
-                                    <h2>House M.D.</h2>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38"
-                                    alt="Game of Thrones" />
-                                <div class="overlay">
-                                    <span>9.2</span>
-                                    <h2>Game of Thrones</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="nav-menu" id="navMenu">
+                    <a href="#benefits" class="nav-link">Benefits</a>
+                    <a href="#team" class="nav-link">Our Team</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
                 </div>
-                <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-        
-        
-            <!-- Problem Section -->
-            <section class="problem">
-                <div class="container">
-                    <h2>The Student Struggle</h2>
-                    <div class="problem-grid">
-                        <div class="problem-item">
-                            <div class="problem-icon">📚</div>
-                            <h3>Lack of Personalized Guidance</h3>
-                            <p>Generic study plans don't address individual learning styles and academic challenges.</p>
-                        </div>
-                        <div class="problem-item">
-                            <div class="problem-icon">⏰</div>
-                            <h3>Overwhelming Syllabus Pressure</h3>
-                            <p>Students struggle to prioritize topics and manage time effectively across subjects.</p>
-                        </div>
-                        <div class="problem-item">
-                            <div class="problem-icon">🎯</div>
-                            <h3>Career Direction Confusion</h3>
-                            <p>Unclear about which academic path leads to desired career outcomes.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Roadmap Section -->
-            <section class="roadmap">
-                <div class="container">
-                    <h2>Interactive Learning Roadmap</h2>
-                    <p class="roadmap-subtitle">Click on each checkpoint to explore your personalized journey</p>
-        
-                    <div class="roadmap-container">
-                        <!-- Dynamic SVG Path -->
-                        <svg class="roadmap-path desktop-path" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
-                                    <stop offset="50%" style="stop-color:var(--primary-color);stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
-                                </linearGradient>
-                            </defs>
-                            <!-- Main curved path that connects checkpoints -->
-                            <path d="M60 375 Q220 275 300 325 Q420 375 500 275 Q600 175 700 225 Q780 275 880 175"
-                                stroke="url(#pathGradient)" stroke-width="4" fill="none" stroke-linecap="round"
-                                class="main-path" />
-                            <!-- Animated dots along path -->
-                            <circle r="3" fill="var(--primary-color)" class="path-dot">
-                                <animateMotion dur="6s" repeatCount="indefinite">
-                                    <mpath href="#mainPath" />
-                                </animateMotion>
-                            </circle>
-                            <path id="mainPath" d="M60 375 Q220 275 300 325 Q420 375 500 275 Q600 175 700 225 Q780 275 880 175"
-                                opacity="0" />
-                        </svg>
-        
-                        <!-- Mobile SVG Path -->
-                        <svg class="roadmap-path mobile-path" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="mobilePathGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
-                                    <stop offset="50%" style="stop-color:var(--primary-color);stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
-                                </linearGradient>
-                            </defs>
-                            <!-- Mobile zigzag path -->
+            </div>
+
+            <div class="nav-right">
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="darkmode-toggle" />
+                    <label for="darkmode-toggle" class="theme-toggle-label">
+                        <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496"
+                            style="enable-background:new 0 0 496 496;" xml:space="preserve">
+                            <rect x="152.994" y="58.921"
+                                transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001"
+                                height="16" />
+                            <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
+                                width="40.001" height="16" />
+                            <rect x="46.947" y="315.048"
+                                transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001"
+                                height="16" />
+                            <rect x="164.966" y="409.112"
+                                transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16"
+                                height="39.999" />
+                            <rect x="303.031" y="421.036"
+                                transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001"
+                                height="16" />
+                            <rect x="409.088" y="315.018"
+                                transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001"
+                                height="16" />
+                            <rect x="409.054" y="165.011"
+                                transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001"
+                                height="16" />
+                            <rect x="315.001" y="46.895"
+                                transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16"
+                                height="39.999" />
                             <path
-                                d="M200 50 Q150 120 200 160 Q250 200 200 240 Q150 280 200 320 Q250 360 200 400 Q150 440 200 480 Q250 520 200 560 Q150 600 200 640 Q250 680 200 750"
-                                stroke="url(#mobilePathGradient)" stroke-width="3" fill="none" stroke-linecap="round"
-                                class="mobile-main-path" />
-                            <!-- Mobile animated dots -->
-                            <circle r="2" fill="var(--primary-color)" class="mobile-path-dot">
-                                <animateMotion dur="8s" repeatCount="indefinite">
-                                    <mpath href="#mobileMainPath" />
-                                </animateMotion>
-                            </circle>
-                            <path id="mobileMainPath"
-                                d="M200 50 Q150 120 200 160 Q250 200 200 240 Q150 280 200 320 Q250 360 200 400 Q150 440 200 480 Q250 520 200 560 Q150 600 200 640 Q250 680 200 750"
-                                opacity="0" />
+                                d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+                            <rect x="240" width="16" height="72" />
+                            <rect x="62.097" y="90.096"
+                                transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999"
+                                height="16" />
+                            <rect y="240" width="72" height="16" />
+                            <rect x="90.091" y="361.915"
+                                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16"
+                                height="71.999" />
+                            <rect x="240" y="424" width="16" height="72" />
+                            <rect x="361.881" y="389.915"
+                                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999"
+                                height="16" />
+                            <rect x="424" y="240" width="72" height="16" />
+                            <rect x="389.911" y="62.091"
+                                transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16"
+                                height="71.999" />
                         </svg>
-        
-                        <div class="roadmap-checkpoints">
-                            <!-- Assessment -->
-                            <div class="checkpoint" data-step="0" data-title="Initial Assessment"
-                                data-description="Comprehensive evaluation of your current academic level, learning style, and goals to create your personalized roadmap.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">📋</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">Assessment</div>
-                            </div>
-        
-                            <!-- AI Matching -->
-                            <div class="checkpoint" data-step="1" data-title="AI Mentor Matching"
-                                data-description="Our advanced AI algorithm analyzes your profile and matches you with the perfect mentor based on expertise, teaching style, and compatibility.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">🤖</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">AI Matching</div>
-                            </div>
-        
-                            <!-- Planning -->
-                            <div class="checkpoint" data-step="2" data-title="Personalized Planning"
-                                data-description="Work with your mentor to create a detailed study plan tailored to your schedule, goals, and learning preferences.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">📝</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">Planning</div>
-                            </div>
-        
-                            <!-- Learning -->
-                            <div class="checkpoint" data-step="3" data-title="Active Learning"
-                                data-description="Engage in regular 1:1 sessions, interactive lessons, and hands-on practice with continuous guidance and support.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">📚</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">Learning</div>
-                            </div>
-        
-                            <!-- Progress -->
-                            <div class="checkpoint" data-step="4" data-title="Progress Tracking"
-                                data-description="Monitor your improvement with detailed analytics, regular assessments, and milestone celebrations along your journey.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">📊</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">Progress</div>
-                            </div>
-        
-                            <!-- Success -->
-                            <div class="checkpoint destination" data-step="5" data-title="Academic Success"
-                                data-description="Achieve your academic goals with improved grades, enhanced confidence, and skills that last a lifetime.">
-                                <div class="checkpoint-marker">
-                                    <div class="checkpoint-icon">🎯</div>
-                                    <div class="checkpoint-pulse"></div>
-                                </div>
-                                <div class="checkpoint-label">Success</div>
-                            </div>
-                        </div>
-        
-                        <!-- Interactive Popup -->
-                        <div class="roadmap-popup" id="roadmapPopup">
-                            <div class="popup-content">
-                                <button class="popup-close" id="popupClose">&times;</button>
-                                <div class="popup-icon"></div>
-                                <h3 class="popup-title"></h3>
-                                <p class="popup-description"></p>
-                                <div class="popup-progress">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill"></div>
-                                    </div>
-                                    <span class="progress-text">Step <span class="step-number"></span> of 6</span>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!-- Background Elements -->
-                        <div class="roadmap-bg-elements">
-                            <div class="bg-circle bg-circle-1"></div>
-                            <div class="bg-circle bg-circle-2"></div>
-                            <div class="bg-circle bg-circle-3"></div>
-                        </div>
-                    </div>
+                        <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739"
+                            style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
+                            <path
+                                d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+                        </svg>
+                    </label>
                 </div>
-            </section>
-        
-            <!-- Benefits Section -->
-            <section class="benefits" id="benefits">
-                <div class="container">
-                    <h2>Why Choose Scoreazy Mentorship</h2>
-                    <div class="benefits-grid">
-                        <div class="benefit-card">
-                            <div class="benefit-icon">📋</div>
-                            <h3>Personalized Learning Plans</h3>
-                            <p>Custom study schedules designed around your strengths, weaknesses, and goals.</p>
-                        </div>
-                        <div class="benefit-card">
-                            <div class="benefit-icon">📊</div>
-                            <h3>Weekly Progress Tracking</h3>
-                            <p>Regular assessments and feedback to keep you on track and motivated.</p>
-                        </div>
-                        <div class="benefit-card">
-                            <div class="benefit-icon">💬</div>
-                            <h3>24/7 Doubt Solving</h3>
-                            <p>Get instant answers to your questions anytime, anywhere from expert mentors.</p>
-                        </div>
-                        <div class="benefit-card">
-                            <div class="benefit-icon">🎓</div>
-                            <h3>University Application Guidance</h3>
-                            <p>Complete support for college applications, essays, and interview preparation.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-        
-        
-            <!-- Testimonials Section -->
-            <section class="testimonials">
-                <div class="container">
-                    <h2>Student Success Stories</h2>
-                    <div class="testimonials-wrapper">
-                        <button class="testimonial-arrow testimonial-arrow-left" id="testimonialPrev">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="testimonials-carousel">
-                            <div class="testimonial-card active">
-                                <div class="testimonial-content">
-                                    <p>"My mentor helped me improve my grades from C+ to A- in just 3 months. The personalized
-                                        approach made all the difference!"</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="author-photo">👩‍💻</div>
-                                    <div class="author-info">
-                                        <h4>Sarah Chen</h4>
-                                        <span>Computer Science, MIT</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <div class="testimonial-content">
-                                    <p>"The university application guidance was incredible. I got into my dream school with a
-                                        full scholarship!"</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="author-photo">👨‍⚕️</div>
-                                    <div class="author-info">
-                                        <h4>Marcus Johnson</h4>
-                                        <span>Pre-Med, Harvard</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <div class="testimonial-content">
-                                    <p>"24/7 doubt solving saved my semester. Having instant access to expert help was a
-                                        game-changer."</p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="author-photo">👩‍🔬</div>
-                                    <div class="author-info">
-                                        <h4>Priya Patel</h4>
-                                        <span>Engineering, Stanford</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="testimonial-arrow testimonial-arrow-right" id="testimonialNext">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="carousel-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Team Section -->
-            <section class="team" id="team">
-                <div class="team-container">
-                    <h1 class="team-title">OUR TEAM</h1>
-                    <div class="carousel-container">
-                        <button class="nav-arrow left" aria-label="Previous team member">‹</button>
-                        <div class="carousel-track">
-                            <div class="team-card" data-index="0">
-                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Emily Kim">
-                            </div>
-                            <div class="team-card" data-index="1">
-                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Michael Steward">
-                            </div>
-                            <div class="team-card" data-index="2">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
-                                    alt="Emma Rodriguez">
-                            </div>
-                            <div class="team-card" data-index="3">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
-                                    alt="Julia Gimmel">
-                            </div>
-                            <div class="team-card" data-index="4">
-                                <img src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
-                                    alt="Lisa Anderson">
-                            </div>
-                            <div class="team-card" data-index="5">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="James Wilson">
-                            </div>
-                        </div>
-                        <button class="nav-arrow right" aria-label="Next team member">›</button>
-                    </div>
-                    <div class="member-info">
-                        <h2 class="member-name">Emily Kim</h2>
-                        <p class="member-role">Founder</p>
-                    </div>
-                    <div class="team-dots">
-                        <div class="team-dot active" data-index="0"></div>
-                        <div class="team-dot" data-index="1"></div>
-                        <div class="team-dot" data-index="2"></div>
-                        <div class="team-dot" data-index="3"></div>
-                        <div class="team-dot" data-index="4"></div>
-                        <div class="team-dot" data-index="5"></div>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- Pricing Section -->
-            <section class="pricing" id="pricing">
-                <div class="container">
-                    <h2>Choose Your Plan</h2>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <div class="plan-header">
-                                <h3>Free Trial</h3>
-                                <div class="price">$0<span>/week</span></div>
-                            </div>
-                            <ul class="plan-features">
-                                <li>✓ 1 mentor session</li>
-                                <li>✓ Basic assessment</li>
-                                <li>✓ Study plan overview</li>
-                                <li>✗ Progress tracking</li>
-                                <li>✗ 24/7 support</li>
-                            </ul>
-                            <button class="btn btn-outline">Start Free Trial</button>
-                        </div>
-                        <div class="pricing-card featured">
-                            <div class="plan-badge">Most Popular</div>
-                            <div class="plan-header">
-                                <h3>Standard</h3>
-                                <div class="price">$99<span>/month</span></div>
-                            </div>
-                            <ul class="plan-features">
-                                <li>✓ 4 mentor sessions/month</li>
-                                <li>✓ Personalized study plan</li>
-                                <li>✓ Weekly progress reports</li>
-                                <li>✓ Doubt solving support</li>
-                                <li>✓ Resource library access</li>
-                            </ul>
-                            <button class="btn btn-primary">Get Started</button>
-                        </div>
-                        <div class="pricing-card">
-                            <div class="plan-header">
-                                <h3>Premium</h3>
-                                <div class="price">$199<span>/month</span></div>
-                            </div>
-                            <ul class="plan-features">
-                                <li>✓ Unlimited mentor sessions</li>
-                                <li>✓ 24/7 priority support</li>
-                                <li>✓ University application help</li>
-                                <li>✓ Career guidance</li>
-                                <li>✓ Parent progress updates</li>
-                            </ul>
-                            <button class="btn btn-outline">Choose Premium</button>
+                <button class="btn btn-primary btn-small">Book Consultation</button>
+            </div>
+
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Movie Night Section -->
+    <section class="movie-night">
+        <div class="content">
+            <div class="info">
+                <p>
+                    Join us for a fantastic
+                    <span class="movie-night-text">movie night</span> filled with popcorn, laughter, and great company!
+                    Whether you're a fan of thrilling
+                    action, heartwarming dramas, or side-splitting comedies, we've got a
+                    film lineup to cater to all tastes. Save the date and bring your
+                    favorite snacks to make it a memorable evening.
+                </p>
+                <button class="btn-movie">Join</button>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b6f5eb64-887c-43b1-aaba-d52a4c59a379"
+                            alt="The Queen's Gambit" />
+                        <div class="overlay">
+                            <span>8.5</span>
+                            <h2>The Queen's Gambit</h2>
                         </div>
                     </div>
-                </div>
-            </section>
-        
-            <!-- FAQ Section -->
-            <section class="faq" id="faq">
-                <div class="container">
-                    <h2>Frequently Asked Questions</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>What qualifications do your mentors have?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>All our mentors are verified educators with advanced degrees from top universities. They
-                                    undergo rigorous screening and have proven track records in academic mentoring.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>How flexible are the session timings?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Sessions can be scheduled according to your availability. We offer morning, afternoon, and
-                                    evening slots across different time zones.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>What is the typical program duration?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Program duration varies based on your goals. Most students see significant improvement within
-                                    3-6 months of consistent mentoring.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>What technology do I need for sessions?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>You only need a computer or tablet with internet connection. We use user-friendly video
-                                    conferencing tools that work on any device.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>What payment options are available?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>We accept all major credit cards, PayPal, and offer monthly or annual payment plans. All
-                                    transactions are secure and encrypted.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>Do you guarantee results?</h3>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>While we cannot guarantee specific grades, 95% of our students report improved academic
-                                    performance within the first semester of mentoring.</p>
-                            </div>
+                    <div class="swiper-slide">
+                        <img class="img-position"
+                            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e906353b-fde0-4518-9a03-16545c1161bd"
+                            alt="Breaking Bad" />
+                        <div class="overlay">
+                            <span>9.5</span>
+                            <h2>Breaking Bad</h2>
                         </div>
                     </div>
-                </div>
-            </section>
-        
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-content">
-                        <div class="footer-brand">
-                            <div class="footer-logo">
-                                <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
-                            </div>
-                            <p>Empowering students through personalized mentorship and academic guidance.</p>
-                        </div>
-                        <div class="footer-links">
-                            <div class="footer-column">
-                                <h4>Product</h4>
-                                <a href="#how-it-works">How It Works</a>
-                                <a href="#benefits">Benefits</a>
-                                <a href="#pricing">Pricing</a>
-                            </div>
-                            <div class="footer-column">
-                                <h4>Support</h4>
-                                <a href="#faq">FAQ</a>
-                                <a href="#contact">Contact</a>
-                                <a href="#help">Help Center</a>
-                            </div>
-                            <div class="footer-column">
-                                <h4>Company</h4>
-                                <a href="#about">About</a>
-                                <a href="#careers">Careers</a>
-                                <a href="#privacy">Privacy</a>
-                            </div>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fc21e481-e28a-41a8-9db3-3b62c1ddc17e"
+                            alt="Wednesday" />
+                        <div class="overlay">
+                            <span>8.1</span>
+                            <h2>Wednesday</h2>
                         </div>
                     </div>
-                    <div class="footer-bottom">
-                        <p>&copy; 2025 Scoreazy. All rights reserved.</p>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6b6ad966-79e1-4d3c-8f92-566d0fee8082"
+                            alt="Stranger Things" />
+                        <div class="overlay">
+                            <span>8.7</span>
+                            <h2>Stranger Things</h2>
+                        </div>
                     </div>
-                </div>
-            </footer>
-        
-            <!-- Sticky CTA -->
-            <div class="sticky-cta" id="stickyCta">
-                <div class="container">
-                    <span>Ready to transform your academic journey?</span>
-                    <button class="btn btn-primary">Book Free Consultation</button>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2ad44f5d-2215-4416-9c9b-2bae3be51a67"
+                            alt="Anne with an E" />
+                        <div class="overlay">
+                            <span>8.6</span>
+                            <h2>Anne with an E</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa8fe914-741f-4bf4-ad4a-24f19d1f4178"
+                            alt="Friends" />
+                        <div class="overlay">
+                            <span>8.9</span>
+                            <h2>Friends</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-position"
+                            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d5f10b4f-7d34-45bd-bb5f-5f1530c2ac1c"
+                            alt="The Crown" />
+                        <div class="overlay">
+                            <span>8.6</span>
+                            <h2>The Crown</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7cbac263-7c55-4428-908e-31018dc1bce3"
+                            alt="House M.D." />
+                        <div class="overlay">
+                            <span>8.7</span>
+                            <h2>House M.D.</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38"
+                            alt="Game of Thrones" />
+                        <div class="overlay">
+                            <span>9.2</span>
+                            <h2>Game of Thrones</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
-            <!-- Consultation Booking Popup -->
-            <div class="consultation-popup" id="consultationPopup">
-                <div class="consultation-overlay"></div>
-                <div class="consultation-modal">
-                    <button class="consultation-close" id="consultationClose">&times;</button>
-                    <div class="consultation-header">
-                        <div class="consultation-icon">📚</div>
-                        <h2>Book Your Free Consultation</h2>
-                        <p>Take the first step towards academic success with personalized mentorship</p>
-                    </div>
-        
-                    <form class="consultation-form" id="consultationForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
-                        </div>
-        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="grade">Current Grade/Level *</label>
-                            <select id="grade" name="grade" required>
-                                <option value="">Select your grade level</option>
-                                <option value="9th">9th Grade</option>
-                                <option value="10th">10th Grade</option>
-                                <option value="11th">11th Grade</option>
-                                <option value="12th">12th Grade</option>
-                                <option value="college-freshman">College Freshman</option>
-                                <option value="college-sophomore">College Sophomore</option>
-                                <option value="college-junior">College Junior</option>
-                                <option value="college-senior">College Senior</option>
-                                <option value="graduate">Graduate Student</option>
-                            </select>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="subjects">Subjects of Interest *</label>
-                            <div class="checkbox-group">
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="math">
-                                    <span class="checkmark"></span>
-                                    Mathematics
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="science">
-                                    <span class="checkmark"></span>
-                                    Science
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="english">
-                                    <span class="checkmark"></span>
-                                    English
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="history">
-                                    <span class="checkmark"></span>
-                                    History
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="languages">
-                                    <span class="checkmark"></span>
-                                    Languages
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="subjects" value="other">
-                                    <span class="checkmark"></span>
-                                    Other
-                                </label>
-                            </div>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="goals">Academic Goals</label>
-                            <textarea id="goals" name="goals" rows="3"
-                                placeholder="Tell us about your academic goals and what you'd like to achieve..."></textarea>
-                        </div>
-        
-                        <div class="form-group">
-                            <label for="preferredTime">Preferred Consultation Time</label>
-                            <select id="preferredTime" name="preferredTime">
-                                <option value="">Select preferred time</option>
-                                <option value="morning">Morning (9 AM - 12 PM)</option>
-                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                                <option value="evening">Evening (5 PM - 8 PM)</option>
-                                <option value="flexible">I'm flexible</option>
-                            </select>
-                        </div>
-        
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-outline" id="cancelConsultation">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Book Free Consultation</button>
-                        </div>
-                    </form>
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>The Student Struggle</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">📚</div>
+                    <h3>Lack of Personalized Guidance</h3>
+                    <p>Generic study plans don't address individual learning styles and academic challenges.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Overwhelming Syllabus Pressure</h3>
+                    <p>Students struggle to prioritize topics and manage time effectively across subjects.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🎯</div>
+                    <h3>Career Direction Confusion</h3>
+                    <p>Unclear about which academic path leads to desired career outcomes.</p>
                 </div>
             </div>
-        
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-            <script src="script.js"></script>
-        </body>
-        
-        </html>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap">
+        <div class="container">
+            <h2>Interactive Learning Roadmap</h2>
+            <p class="roadmap-subtitle">Click on each checkpoint to explore your personalized journey</p>
+
+            <div class="roadmap-container">
+                <!-- Dynamic SVG Path -->
+                <svg class="roadmap-path desktop-path" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Main curved path that connects checkpoints -->
+                    <path d="M60 375 Q220 275 300 325 Q420 375 500 275 Q600 175 700 225 Q780 275 880 175"
+                        stroke="url(#pathGradient)" stroke-width="4" fill="none" stroke-linecap="round"
+                        class="main-path" />
+                    <!-- Animated dots along path -->
+                    <circle r="3" fill="var(--primary-color)" class="path-dot">
+                        <animateMotion dur="6s" repeatCount="indefinite">
+                            <mpath href="#mainPath" />
+                        </animateMotion>
+                    </circle>
+                    <path id="mainPath" d="M60 375 Q220 275 300 325 Q420 375 500 275 Q600 175 700 225 Q780 275 880 175"
+                        opacity="0" />
+                </svg>
+
+                <!-- Mobile SVG Path -->
+                <svg class="roadmap-path mobile-path" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="mobilePathGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Mobile zigzag path -->
+                    <path
+                        d="M200 50 Q150 120 200 160 Q250 200 200 240 Q150 280 200 320 Q250 360 200 400 Q150 440 200 480 Q250 520 200 560 Q150 600 200 640 Q250 680 200 750"
+                        stroke="url(#mobilePathGradient)" stroke-width="3" fill="none" stroke-linecap="round"
+                        class="mobile-main-path" />
+                    <!-- Mobile animated dots -->
+                    <circle r="2" fill="var(--primary-color)" class="mobile-path-dot">
+                        <animateMotion dur="8s" repeatCount="indefinite">
+                            <mpath href="#mobileMainPath" />
+                        </animateMotion>
+                    </circle>
+                    <path id="mobileMainPath"
+                        d="M200 50 Q150 120 200 160 Q250 200 200 240 Q150 280 200 320 Q250 360 200 400 Q150 440 200 480 Q250 520 200 560 Q150 600 200 640 Q250 680 200 750"
+                        opacity="0" />
+                </svg>
+
+                <div class="roadmap-checkpoints">
+                    <!-- Assessment -->
+                    <div class="checkpoint" data-step="0" data-title="Initial Assessment"
+                        data-description="Comprehensive evaluation of your current academic level, learning style, and goals to create your personalized roadmap.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">📋</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">Assessment</div>
+                    </div>
+
+                    <!-- AI Matching -->
+                    <div class="checkpoint" data-step="1" data-title="AI Mentor Matching"
+                        data-description="Our advanced AI algorithm analyzes your profile and matches you with the perfect mentor based on expertise, teaching style, and compatibility.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">🤖</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">AI Matching</div>
+                    </div>
+
+                    <!-- Planning -->
+                    <div class="checkpoint" data-step="2" data-title="Personalized Planning"
+                        data-description="Work with your mentor to create a detailed study plan tailored to your schedule, goals, and learning preferences.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">📝</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">Planning</div>
+                    </div>
+
+                    <!-- Learning -->
+                    <div class="checkpoint" data-step="3" data-title="Active Learning"
+                        data-description="Engage in regular 1:1 sessions, interactive lessons, and hands-on practice with continuous guidance and support.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">📚</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">Learning</div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="checkpoint" data-step="4" data-title="Progress Tracking"
+                        data-description="Monitor your improvement with detailed analytics, regular assessments, and milestone celebrations along your journey.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">📊</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">Progress</div>
+                    </div>
+
+                    <!-- Success -->
+                    <div class="checkpoint destination" data-step="5" data-title="Academic Success"
+                        data-description="Achieve your academic goals with improved grades, enhanced confidence, and skills that last a lifetime.">
+                        <div class="checkpoint-marker">
+                            <div class="checkpoint-icon">🎯</div>
+                            <div class="checkpoint-pulse"></div>
+                        </div>
+                        <div class="checkpoint-label">Success</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Popup -->
+                <div class="roadmap-popup" id="roadmapPopup">
+                    <div class="popup-content">
+                        <button class="popup-close" id="popupClose">&times;</button>
+                        <div class="popup-icon"></div>
+                        <h3 class="popup-title"></h3>
+                        <p class="popup-description"></p>
+                        <div class="popup-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <span class="progress-text">Step <span class="step-number"></span> of 6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Background Elements -->
+                <div class="roadmap-bg-elements">
+                    <div class="bg-circle bg-circle-1"></div>
+                    <div class="bg-circle bg-circle-2"></div>
+                    <div class="bg-circle bg-circle-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Why Choose Scoreazy Mentorship</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Personalized Learning Plans</h3>
+                    <p>Custom study schedules designed around your strengths, weaknesses, and goals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Weekly Progress Tracking</h3>
+                    <p>Regular assessments and feedback to keep you on track and motivated.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>24/7 Doubt Solving</h3>
+                    <p>Get instant answers to your questions anytime, anywhere from expert mentors.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>University Application Guidance</h3>
+                    <p>Complete support for college applications, essays, and interview preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Student Success Stories</h2>
+            <div class="testimonials-wrapper">
+                <button class="testimonial-arrow testimonial-arrow-left" id="testimonialPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="testimonials-carousel">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"My mentor helped me improve my grades from C+ to A- in just 3 months. The personalized
+                                approach made all the difference!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-photo">👩‍💻</div>
+                            <div class="author-info">
+                                <h4>Sarah Chen</h4>
+                                <span>Computer Science, MIT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The university application guidance was incredible. I got into my dream school with a
+                                full scholarship!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-photo">👨‍⚕️</div>
+                            <div class="author-info">
+                                <h4>Marcus Johnson</h4>
+                                <span>Pre-Med, Harvard</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"24/7 doubt solving saved my semester. Having instant access to expert help was a
+                                game-changer."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-photo">👩‍🔬</div>
+                            <div class="author-info">
+                                <h4>Priya Patel</h4>
+                                <span>Engineering, Stanford</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial-arrow testimonial-arrow-right" id="testimonialNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="team-container">
+            <h1 class="team-title">OUR TEAM</h1>
+            <div class="carousel-container">
+                <button class="nav-arrow left" aria-label="Previous team member">‹</button>
+                <div class="carousel-track">
+                    <div class="team-card" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Emily Kim">
+                    </div>
+                    <div class="team-card" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Michael Steward">
+                    </div>
+                    <div class="team-card" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
+                            alt="Emma Rodriguez">
+                    </div>
+                    <div class="team-card" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww"
+                            alt="Julia Gimmel">
+                    </div>
+                    <div class="team-card" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Lisa Anderson">
+                    </div>
+                    <div class="team-card" data-index="5">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="James Wilson">
+                    </div>
+                </div>
+                <button class="nav-arrow right" aria-label="Next team member">›</button>
+            </div>
+            <div class="member-info">
+                <h2 class="member-name">Emily Kim</h2>
+                <p class="member-role">Founder</p>
+            </div>
+            <div class="team-dots">
+                <div class="team-dot active" data-index="0"></div>
+                <div class="team-dot" data-index="1"></div>
+                <div class="team-dot" data-index="2"></div>
+                <div class="team-dot" data-index="3"></div>
+                <div class="team-dot" data-index="4"></div>
+                <div class="team-dot" data-index="5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Free Trial</h3>
+                        <div class="price">$0<span>/week</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 1 mentor session</li>
+                        <li>✓ Basic assessment</li>
+                        <li>✓ Study plan overview</li>
+                        <li>✗ Progress tracking</li>
+                        <li>✗ 24/7 support</li>
+                    </ul>
+                    <button class="btn btn-outline">Start Free Trial</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Standard</h3>
+                        <div class="price">$99<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 4 mentor sessions/month</li>
+                        <li>✓ Personalized study plan</li>
+                        <li>✓ Weekly progress reports</li>
+                        <li>✓ Doubt solving support</li>
+                        <li>✓ Resource library access</li>
+                    </ul>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="price">$199<span>/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Unlimited mentor sessions</li>
+                        <li>✓ 24/7 priority support</li>
+                        <li>✓ University application help</li>
+                        <li>✓ Career guidance</li>
+                        <li>✓ Parent progress updates</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Get answers to the most common questions about our mentorship program</p>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">🎓</div>
+                        <h3>What qualifications do your mentors have?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>All our mentors are verified educators with advanced degrees from top universities. They
+                            undergo rigorous screening and have proven track records in academic mentoring with years of
+                            teaching experience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">⏰</div>
+                        <h3>How flexible are the session timings?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>Sessions can be scheduled according to your availability. We offer morning, afternoon, and
+                            evening slots across different time zones to accommodate students worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">📅</div>
+                        <h3>What is the typical program duration?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>Program duration varies based on your goals. Most students see significant improvement within
+                            3-6 months of consistent mentoring, with some achieving their targets even sooner.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">💻</div>
+                        <h3>What technology do I need for sessions?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>You only need a computer or tablet with internet connection. We use user-friendly video
+                            conferencing tools that work on any device, plus digital whiteboard and screen sharing
+                            capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">💳</div>
+                        <h3>What payment options are available?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>We accept all major credit cards, PayPal, and offer monthly or annual payment plans. All
+                            transactions are secure and encrypted with industry-standard security protocols.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">📈</div>
+                        <h3>Do you guarantee results?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>While we cannot guarantee specific grades, 95% of our students report improved academic
+                            performance within the first semester of mentoring. We're committed to your success!</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">🤖</div>
+                        <h3>How does the mentor matching work?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>Our AI algorithm analyzes your academic profile, learning style, and goals to match you with
+                            the most compatible mentor from our network of expert educators.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-card-header">
+                        <div class="faq-icon">📚</div>
+                        <h3>What subjects do you cover?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-card-content">
+                        <p>We cover all major subjects including Mathematics, Science (Physics, Chemistry, Biology),
+                            English, History, and specialized areas like SAT/ACT prep and university applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-scor">scor</span><span class="logo-eazy">eazy</span>
+                    </div>
+                    <p>Empowering students through personalized mentorship and academic guidance.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#benefits">Benefits</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#help">Help Center</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Scoreazy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="container">
+            <span>Ready to transform your academic journey?</span>
+            <button class="btn btn-primary">Book Free Consultation</button>
+        </div>
+    </div>
+
+    <!-- Consultation Booking Popup -->
+    <div class="consultation-popup" id="consultationPopup">
+        <div class="consultation-overlay"></div>
+        <div class="consultation-modal">
+            <button class="consultation-close" id="consultationClose">&times;</button>
+            <div class="consultation-header">
+                <div class="consultation-icon">📚</div>
+                <h2>Book Your Free Consultation</h2>
+                <p>Take the first step towards academic success with personalized mentorship</p>
+            </div>
+
+            <form class="consultation-form" id="consultationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="grade">Current Grade/Level *</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select your grade level</option>
+                        <option value="9th">9th Grade</option>
+                        <option value="10th">10th Grade</option>
+                        <option value="11th">11th Grade</option>
+                        <option value="12th">12th Grade</option>
+                        <option value="college-freshman">College Freshman</option>
+                        <option value="college-sophomore">College Sophomore</option>
+                        <option value="college-junior">College Junior</option>
+                        <option value="college-senior">College Senior</option>
+                        <option value="graduate">Graduate Student</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjects">Subjects of Interest *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="math">
+                            <span class="checkmark"></span>
+                            Mathematics
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="science">
+                            <span class="checkmark"></span>
+                            Science
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="english">
+                            <span class="checkmark"></span>
+                            English
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="history">
+                            <span class="checkmark"></span>
+                            History
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="languages">
+                            <span class="checkmark"></span>
+                            Languages
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="other">
+                            <span class="checkmark"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">Academic Goals</label>
+                    <textarea id="goals" name="goals" rows="3"
+                        placeholder="Tell us about your academic goals and what you'd like to achieve..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredTime">Preferred Consultation Time</label>
+                    <select id="preferredTime" name="preferredTime">
+                        <option value="">Select preferred time</option>
+                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                        <option value="evening">Evening (5 PM - 8 PM)</option>
+                        <option value="flexible">I'm flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" id="cancelConsultation">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Book Free Consultation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -67,21 +67,40 @@ if (testimonialNextBtn) {
         showSlide(currentSlide);
     });
 }
-// FAQ Accordion
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const faqItem = question.parentElement;
-        const isActive = faqItem.classList.contains('active');
+// FAQ Card Accordion
+document.querySelectorAll('.faq-card-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const faqCard = header.parentElement;
+        const isActive = faqCard.classList.contains('active');
         
-        // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.classList.remove('active');
+        // Close all FAQ cards
+        document.querySelectorAll('.faq-card').forEach(card => {
+            card.classList.remove('active');
         });
         
-        // Open clicked item if it wasn't active
+        // Open clicked card if it wasn't active
         if (!isActive) {
-            faqItem.classList.add('active');
+            faqCard.classList.add('active');
         }
+    });
+});
+
+// Add keyboard navigation for FAQ cards
+document.querySelectorAll('.faq-card-header').forEach(header => {
+    header.setAttribute('tabindex', '0');
+    header.setAttribute('role', 'button');
+    header.setAttribute('aria-expanded', 'false');
+    
+    header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            header.click();
+        }
+    });
+    
+    header.addEventListener('click', () => {
+        const isActive = header.parentElement.classList.contains('active');
+        header.setAttribute('aria-expanded', isActive);
     });
 });
 // Sticky CTA - Removed since hero section no longer exists
