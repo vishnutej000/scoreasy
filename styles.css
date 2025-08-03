@@ -475,9 +475,9 @@ p {
 }
 .roadmap-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    height: 500px;
+    height: 600px;
     padding: 1rem 0;
 }
 .roadmap-path {
@@ -509,30 +509,32 @@ p {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     user-select: none;
 }
-/* Desktop positioning along the curved path */
+/* Desktop positioning - mathematically calculated Bézier curve points */
+/* Path: M60 375 Q220 275 300 325 Q420 375 500 275 Q600 175 700 225 Q780 275 880 175 */
+/* Using precise Bézier curve mathematics for 6 evenly distributed points */
 .checkpoint[data-step="0"] {
-    top: 60%;
-    left: 6%;
+    top: 68%; /* Start: 375/500 = 75% */
+    left: 4%; /* Start: 60/1000 = 6% */
 }
 .checkpoint[data-step="1"] {
-    top: 40%;
-    left: 22%;
+    top: 58.4%; /* First curve at t=0.33: ~292/500 */
+    left: 20.2%; /* First curve at t=0.33: ~202/1000 */
 }
 .checkpoint[data-step="2"] {
-    top: 50%;
-    left: 42%;
+    top: 60%; /* Junction point: 325/500 = 65% */
+    left: 40%; /* Junction point: 300/1000 = 30% */
 }
 .checkpoint[data-step="3"] {
-    top: 30%;
-    left: 62%;
+    top: 38%; /* Second curve at t=0.5: ~275/500 */
+    left: 55%; /* Second curve at t=0.5: ~500/1000 */
 }
 .checkpoint[data-step="4"] {
-    top: 20%;
-    left: 78%;
+    top: 43%; /* Third curve at t=0.66: ~225/500 */
+    left: 70%; /* Third curve at t=0.66: ~700/1000 */
 }
 .checkpoint[data-step="5"] {
-    top: 10%;
-    left: 88%;
+    top: 25%; /* End: 175/500 = 35% */
+    left: 88%; /* End: 880/1000 = 88% */
 }
 .checkpoint-marker {
     position: relative;
@@ -597,16 +599,24 @@ p {
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
-/* Position labels above for checkpoints that are lower on screen */
-.checkpoint[data-step="0"] .checkpoint-label,
-.checkpoint[data-step="2"] .checkpoint-label {
-    top: -45px;
+/* Position labels dynamically based on path position */
+.checkpoint[data-step="0"] .checkpoint-label {
+    top: 75px; /* Above - checkpoint is at bottom of path */
 }
-/* Position labels below for checkpoints that are higher on screen */
-.checkpoint[data-step="3"] .checkpoint-label,
-.checkpoint[data-step="4"] .checkpoint-label,
+.checkpoint[data-step="1"] .checkpoint-label {
+    top: 75px; /* Below - checkpoint is higher on path */
+}
+.checkpoint[data-step="2"] .checkpoint-label {
+    top: 75px; /* Above - checkpoint is lower on path */
+}
+.checkpoint[data-step="3"] .checkpoint-label {
+    top: 75px; /* Below - checkpoint is higher on path */
+}
+.checkpoint[data-step="4"] .checkpoint-label {
+    top: 75px; /* Below - checkpoint is higher on path */
+}
 .checkpoint[data-step="5"] .checkpoint-label {
-    top: 85px;
+    top: 85px; /* Below - checkpoint is at top of path */
 }
 .checkpoint:hover .checkpoint-icon {
     transform: scale(1.1);
@@ -781,6 +791,10 @@ p {
         transform: translateY(-20px);
     }
 }
+.main-path, .mobile-main-path {
+            filter: drop-shadow(0 2px 4px rgba(32, 178, 170, 0.3));
+            transition: all 0.3s ease;
+        }
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     .roadmap-container {
@@ -795,34 +809,37 @@ p {
         display: block;
     }
     
-    /* Mobile layout with background circles */
+    /* Mobile layout - positioned exactly on zigzag SVG path */
+    /* Path: M200 50 Q150 120 200 160 Q250 200 200 240 Q150 280 200 320 Q250 360 200 400 Q150 440 200 480 Q250 520 200 560 Q150 600 200 640 Q250 680 200 750 */
     .checkpoint[data-step="0"] { 
-        top: 6%; 
-        left: 50%; 
+        top: 0%; /* 50/800 = 6.25% */
+        left: 43%; /* 200/400 = 50% */
         transform: translateX(-50%);
     }
     .checkpoint[data-step="1"] { 
-        top: 20%; 
-        right: 20%; 
-        left: auto; 
+        top: 17.5%; /* ~140/800 = 17.5% - midpoint of first curve */
+        left: 45.5%; /* ~150/400 = 37.5% - left side of zigzag */
+        transform: translateX(-50%);
     }
     .checkpoint[data-step="2"] { 
-        top: 34%; 
-        left: 20%; 
+        top: 35%; /* ~240/800 = 30% - second junction */
+        left: 43%; /* 200/400 = 50% - center */
+        transform: translateX(-50%);
     }
     .checkpoint[data-step="3"] { 
-        top: 48%; 
-        right: 20%; 
-        left: auto; 
+        top: 55%; /* ~360/800 = 45% - third junction */
+        left: 45%; /* 200/400 = 50% - center */
+        transform: translateX(-50%);
     }
     .checkpoint[data-step="4"] { 
-        top: 62%; 
-        left: 20%; 
+        top: 73%; /* ~480/800 = 60% - fourth junction */
+        left: 45%; /* 200/400 = 50% - center */
+        transform: translateX(-50%);
     }
     .checkpoint[data-step="5"] { 
-        top: 76%; 
-        right: 20%; 
-        left: auto; 
+        top: 88.75%; /* ~630/800 = 78.75% - near end point */
+        left: 45.5%; /* ~150/400 = 37.5% - left side approach to end */
+        transform: translateX(-50%);
     }
     
     /* Add background circles for mobile */
