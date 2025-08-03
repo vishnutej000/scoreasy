@@ -64,6 +64,24 @@ dots.forEach((dot, index) => {
     });
 });
 
+// Arrow navigation for testimonials
+const testimonialPrevBtn = document.getElementById('testimonialPrev');
+const testimonialNextBtn = document.getElementById('testimonialNext');
+
+if (testimonialPrevBtn) {
+    testimonialPrevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + testimonialCards.length) % testimonialCards.length;
+        showSlide(currentSlide);
+    });
+}
+
+if (testimonialNextBtn) {
+    testimonialNextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % testimonialCards.length;
+        showSlide(currentSlide);
+    });
+}
+
 // FAQ Accordion
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
@@ -189,6 +207,14 @@ document.addEventListener('keydown', (e) => {
             dots[newIndex].click();
         }
     }
+    
+    // Keyboard navigation for testimonial arrows
+    if (e.target.classList.contains('testimonial-arrow')) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.target.click();
+        }
+    }
 });
 
 // Add ARIA labels for better accessibility
@@ -199,6 +225,17 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.setAttribute('role', 'button');
         dot.setAttribute('tabindex', '0');
     });
+    
+    // Add ARIA labels to testimonial arrows
+    if (testimonialPrevBtn) {
+        testimonialPrevBtn.setAttribute('aria-label', 'Previous testimonial');
+        testimonialPrevBtn.setAttribute('tabindex', '0');
+    }
+    
+    if (testimonialNextBtn) {
+        testimonialNextBtn.setAttribute('aria-label', 'Next testimonial');
+        testimonialNextBtn.setAttribute('tabindex', '0');
+    }
     
     // Add ARIA labels to FAQ items
     document.querySelectorAll('.faq-question').forEach((question, index) => {
@@ -357,3 +394,37 @@ if (teamCards.length > 0) {
 }
 
 console.log('Scoreazy Mentorship Landing Page loaded successfully!');
+
+// Movie Night Swiper Initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Swiper is loaded and swiper element exists
+    if (typeof Swiper !== 'undefined' && document.querySelector('.movie-night .swiper')) {
+        var movieSwiper = new Swiper(".movie-night .swiper", {
+            effect: "cards",
+            grabCursor: true,
+            initialSlide: 2,
+            speed: 500,
+            loop: true,
+            rotate: true,
+            mousewheel: {
+                invert: false,
+            },
+            // Add keyboard navigation
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            // Add accessibility
+            a11y: {
+                prevSlideMessage: 'Previous movie',
+                nextSlideMessage: 'Next movie',
+                firstSlideMessage: 'This is the first movie',
+                lastSlideMessage: 'This is the last movie',
+            },
+        });
+        
+        console.log('Movie Night Swiper initialized successfully!');
+    } else {
+        console.warn('Swiper library not loaded or swiper element not found');
+    }
+});
