@@ -1,3 +1,81 @@
+// Hamburger menu toggle for mobile
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const themeToggleContainer = document.querySelector('.nav-right .theme-toggle-container');
+  
+  // Move theme toggle to mobile menu on mobile devices
+  function handleMobileNavigation() {
+    const body = document.body;
+    
+    if (window.innerWidth <= 768) {
+      if (themeToggleContainer && navMenu && !navMenu.querySelector('.theme-toggle-container')) {
+        const clonedThemeToggle = themeToggleContainer.cloneNode(true);
+        // Update the cloned toggle ID to avoid conflicts
+        const clonedCheckbox = clonedThemeToggle.querySelector('#darkmode-toggle');
+        if (clonedCheckbox) {
+          clonedCheckbox.id = 'darkmode-toggle-mobile';
+          const clonedLabel = clonedThemeToggle.querySelector('label');
+          if (clonedLabel) {
+            clonedLabel.setAttribute('for', 'darkmode-toggle-mobile');
+          }
+          // Sync with main theme toggle
+          clonedCheckbox.checked = document.getElementById('darkmode-toggle').checked;
+          
+          // Add event listener to mobile theme toggle
+          clonedCheckbox.addEventListener('change', function() {
+            const mainToggle = document.getElementById('darkmode-toggle');
+            mainToggle.checked = this.checked;
+            const newTheme = this.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+          });
+        }
+        navMenu.appendChild(clonedThemeToggle);
+      }
+      // Set mobile body margin
+      if (navMenu.classList.contains('active')) {
+        const menuHeight = navMenu.scrollHeight;
+        body.style.marginTop = `${70 + menuHeight}px`;
+      } else {
+        body.style.marginTop = '70px';
+      }
+    } else {
+      // Remove cloned theme toggle on desktop
+      const clonedToggle = navMenu.querySelector('.theme-toggle-container');
+      if (clonedToggle) {
+        clonedToggle.remove();
+      }
+      // Reset body margin for desktop
+      body.style.marginTop = '80px';
+      // Close mobile menu if open
+      navMenu.classList.remove('active');
+    }
+  }
+  
+  // Call on load and resize
+  handleMobileNavigation();
+  window.addEventListener('resize', handleMobileNavigation);
+  
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      navMenu.classList.toggle('active');
+      
+      // Adjust body top margin when menu is active on mobile
+      if (window.innerWidth <= 768) {
+        const body = document.body;
+        if (navMenu.classList.contains('active')) {
+          // Get the height of the dropdown menu
+          const menuHeight = navMenu.scrollHeight;
+          body.style.marginTop = `${70 + menuHeight}px`;
+        } else {
+          body.style.marginTop = '70px';
+        }
+      }
+    });
+  }
+});
 // Dark Mode Toggle
 const themeToggle = document.getElementById('darkmode-toggle');
 const currentTheme = localStorage.getItem('theme') || 'light';
@@ -9,20 +87,31 @@ themeToggle.addEventListener('change', () => {
     
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    
+    // Update mobile theme toggle if it exists
+    const mobileThemeToggle = document.getElementById('darkmode-toggle-mobile');
+    if (mobileThemeToggle) {
+        mobileThemeToggle.checked = themeToggle.checked;
+    }
 });
 function updateThemeToggle(theme) {
     themeToggle.checked = theme === 'dark';
 }
-// Mobile Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+
 // Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navMenu = document.querySelector('.nav-menu');
+            const body = document.body;
+            if (navMenu) {
+                navMenu.classList.remove('active');
+                // Reset body margin when menu closes
+                if (window.innerWidth <= 768) {
+                    body.style.marginTop = '70px';
+                }
+            }
+        });
     });
 });
 // Testimonials Carousel
